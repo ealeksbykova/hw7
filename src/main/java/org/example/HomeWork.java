@@ -3,6 +3,10 @@ package org.example;
 
 import java.util.List;
 
+import static org.example.GetDoorNumbersUtil.makeHarryGrateAgain;
+import static org.example.GetDoorNumbersUtil.validateInput;
+import static org.example.GetLeaveOrderUtils.leaveOrder;
+
 public class HomeWork {
 
     /**
@@ -11,7 +15,9 @@ public class HomeWork {
      * <a href="https://acm.timus.ru/problem.aspx?space=1&num=1439">https://acm.timus.ru/problem.aspx?space=1&num=1439</a>
      */
     public List<Integer> getOriginalDoorNumbers(int maxDoors, List<Action> actionList) {
-        return null;
+        validateInput(maxDoors, actionList);
+
+        return makeHarryGrateAgain(maxDoors, actionList);
     }
 
     /**
@@ -28,7 +34,6 @@ public class HomeWork {
      * _ <b>4</b> => 4
      */
     public List<Integer> getLeaveOrder(int maxUnits, int leaveInterval) {
-        return null;
+        return leaveOrder(maxUnits, leaveInterval);
     }
-
 }
